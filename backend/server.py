@@ -16,10 +16,6 @@ class PortfolioHoldings(BaseModel):
 
 app = FastAPI()
 
-# repsonse helpers
-
-# ------ end ------
-
 @app.get("/portfolio-chart", response_model=PortfolioChart)
 def read_portfolio_chart(user_id : str = Query(...)) -> PortfolioChart:
     # validating input isnt null for clear instructions
